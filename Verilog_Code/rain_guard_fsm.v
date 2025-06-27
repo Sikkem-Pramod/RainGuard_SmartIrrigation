@@ -1,6 +1,5 @@
 // File: rain_guard_fsm.v
 // Description: FSM module to decide servo angle based on rain and soil conditions
-// Author: Sikkem Pramod
 // Date: June 2025
 // Project: RainGuard – Smart Irrigation using Verilog and FPGA
 
