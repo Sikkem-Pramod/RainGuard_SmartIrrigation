@@ -1,6 +1,5 @@
 // File: pwm_servo.v
 // Description: PWM generation module to control servo motor for smart irrigation system
-// Author: Sikkem Pramod
 // Date: June 2025
 // Project: RainGuard – Smart Irrigation using Verilog and FPGA
 
