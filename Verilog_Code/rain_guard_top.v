@@ -1,6 +1,5 @@
 // File: rain_guard_top.v
 // Description: Top module integrating FSM and PWM for RainGuard system
-// Author: Sikkem Pramod
 // Date: June 2025
 // Project: RainGuard – Smart Irrigation using Verilog and FPGA
 
