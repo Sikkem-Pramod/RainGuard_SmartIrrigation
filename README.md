@@ -26,12 +26,10 @@ RainGuard_SmartIrrigation/
 │ ├── testbench.v
 │ └── waveform.vcd / waveform.png
 ├── Media/
-│ ├── output_photo1.jpg
-│ ├── output_photo2.jpg
-│ └── demo_video.mp4
-├── Docs/
-│ ├── README.md
-│ └── RainGuard_Portfolio.pdf 
+| ├── Finite State Machine.jpg
+│ ├── FPGA Development Setup 1.jpg
+│ ├── FPGA Development Setup 2.jpg
+│ └── Demo video.mp4
 ```
 ---
 
