@@ -24,7 +24,8 @@ RainGuard_SmartIrrigation/
 │ └── rain_guard_top.v
 ├── Simulation/
 │ ├── testbench.v
-│ └── waveform.vcd / waveform.png
+│ └── Simulation Output.png
+│ └── Tcl console Output
 ├── Media/
 | ├── Finite State Machine.jpg
 │ ├── FPGA Development Setup 1.jpg
