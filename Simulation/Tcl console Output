@@ -1,0 +1,34 @@
+----------------------------------------------------------------------------------
+     Time   | reset | rain_in | soil_dry |   FSM_state | angle_sel | PWM_out (sample)
+----------------------------------------------------------------------------------
+100000      | 1     | 0       | 0        | N/A         | 0         | 0
+100000      | 0     | 0       | 0        | IDLE        | 0         | 0
+---- After 40ms in IDLE (0 degrees) ----
+40000100000 | 0     | 0       | 0        | IDLE        | 1         | 0
+
+--- Test Case 1: Rain starts (soil wet) -> COVER_CROP ---
+40000140000 | 0     | 1       | 0        | CHECK/COVER | 0         | 1
+---- After 100ms in COVER_CROP (90 degrees) ----
+140000140000 | 0    | 1       | 0        | COVER_CROP  | 0         | 1
+
+--- Test Case 2: Rain stops -> IDLE ---
+140000180000 | 0    | 0       | 0        | IDLE        | 0         | 1
+---- After 100ms in IDLE (0 degrees) ----
+240000180000 | 0    | 0       | 0        | IDLE        | 1         | 1
+
+--- Test Case 3: Rain starts (soil dry) -> LEAVE_OPEN ---
+240000220000 | 0    | 1       | 1        | CHECK/LEAVE | 0         | 1
+---- After 100ms in LEAVE_OPEN (0 degrees) ----
+340000220000 | 0    | 1       | 1        | LEAVE_OPEN  | 0         | 1
+
+--- Test Case 4: While LEAVE_OPEN, soil becomes WET -> COVER_CROP ---
+340000260000 | 0    | 1       | 0        | COVER_CROP  | 0         | 1
+---- After 100ms in COVER_CROP (90 degrees) ----
+440000260000 | 0    | 1       | 0        | COVER_CROP  | 0         | 1
+
+--- Test Case 5: Quick Reset ---
+440000360000 | 0    | 1       | 1        | IDLE       | 0          | 1
+---- Final IDLE (0 degrees) ----
+480000360000 | 0    | 1       | 1        | IDLE       | 0          | 1
+----------------------------------------------------------------------------------
+Simulation finished.
